@@ -1,4 +1,4 @@
-# Chapter 1: Variables 
+#  Chapter 1: Variables (Detailed Deep Dive)
 
 Flutter aur Dart seekhne ka sabse pehla kadam. Agar aap data store karna nahi jante, toh aap app nahi bana sakte.
 
@@ -30,19 +30,27 @@ Sochiye aap ek App bana rahe hain jisme user ka naam "Vivek" 100 jagah dikhana h
 
 ---
 
-## 3.How to write? (Syntax)
+## 3.  How to write? (Syntax)
 
 Dart mein variable banane ka ek fixed formula hai:
+
 ```dart
 DataType variableName = Value;
+```
+## 4. 🧩 Data Types (Iske andar kya kya likh sakte hain?)
+Data Type,Description (Matlab),Example
+String,"Text/Lines. Humesha quotes """" mein likhte hain.","""Hello World"", ""Vivek"""
+int,Whole Numbers. Bina point wale number.,"10, 500, -5"
+double,Decimal Numbers. Point wale number.,"10.5, 99.99"
+bool,Logic. Sirf true (sahi) ya false (galat).,"true, false"
 
-DataType: Batana padta hai dabba kis cheez ka hai (Text hai? Number hai?).
+*** DataType: Batana padta hai dabba kis cheez ka hai (Text hai? Number hai?).
 
 variableName: Dabbe par kya label lagana hai (e.g., userName, age).
 
-Value: Asli maal jo andar rakhna hai.
+Value: Asli maal jo andar rakhna hai. ***
 
- Core Data Types (Isme kya kya rakh sakte hain?)
+##  Core Data Types (Isme kya kya rakh sakte hain?)
 Dart mein 4 sabse zaroori types hote hain:
 
 A. String (Text ke liye)
@@ -56,36 +64,40 @@ String message = "Hello, kaise ho?";
 B. int (Poore Number ke liye)
 Integer (int) matlab bina point wale number. Jaise umar, saal, quantity.
 
-Dart
+```Dart
 
 int age = 24;
 int year = 2025;
 int quantity = 5;
 C. double (Point wale Number ke liye)
 Jab precision chahiye ho. Jaise price, percentage, weight.
-
-Dart
+```
+```Dart
 
 double price = 99.50;
 double percentage = 85.5;
 double temperature = 36.6;
 D. bool (Haan ya Na ke liye)
 Boolean (bool) sirf do value leta hai: true (sahi) ya false (galat). Logic lagane ke liye sabse zaroori.
-
-Dart
+```
+```Dart
 
 bool isLogin = true;
 bool isDarkTheme = false;
- Advanced Concepts (Zero to Hero Section)
+
+```
+
+5.  Advanced Concepts (Zero to Hero Section)
 Sirf basic types kaafi nahi hain. Professional developers inka bhi use karte hain:
 
- var (Smart Variable)
+A. var (Smart Variable)
 Agar aapko type nahi pata, ya aap Dart par chhodna chahte hain, toh var use karein. Dart khud samajh jayega.
 
-Dart
+```Dart
 
 var college = "BCA College"; // Dart samajh gaya ye String hai
-var marks = 90;              // Dart samajh gaya ye int hai
+var marks = 90;        // Dart samajh gaya ye int hai
+```
 B. final vs const (Fixed Variables)
 Kabhi-kabhi hum chahte hain ki ek baar value set ho gayi toh wo Change na ho.
 
@@ -93,18 +105,20 @@ final: Iski value code run hone par set hoti hai, par uske baad change nahi hoti
 
 const: Ye pathar ki lakeer hai. Code run hone se pehle hi fix honi chahiye. (Jaise: Pi ki value 3.14).
 
-Dart
+```Dart
 
 final String today = "Friday"; 
-// today = "Saturday"; //Error aayega! Change nahi kar sakte.
+// today = "Saturday"; // Error aayega! Change nahi kar sakte.
 
 const double pi = 3.14;
- Real Life Example (Zomato Food Order)
+
+```
+6.  Real Life Example (Zomato Food Order)
 Chaliye dekhte hain ek real app mein ye sab ek saath kaise use hote hain.
 
 Scenario: Ek user ne Zomato par Burger order kiya hai.
 
-Dart
+```Dart
 
 void main() {
   // 1. String: Khane ka naam
@@ -142,6 +156,5 @@ Dish: Chicken Burger
 From: Burger King
 Is Veg: false
 Total Bill: ₹299.0
+```
 
-```dart
-DataType variableName = Value;
